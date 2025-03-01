@@ -26,7 +26,7 @@ let gallery = [
 
 function Image({ images, para }) {
   return (
-    <div className="flex flex-col items-center justify-center p-2 border-solid border-black border-2">
+    <div class="flex flex-col items-center justify-center p-2 border-solid bg-white border-black border-2">
       <img src={images} alt="Gallery Image" class="w-full h-80 rounded-lg shadow-lg" />
       <p className="mt-2 text-center font-semibold">{para}</p>
     </div>
@@ -36,7 +36,7 @@ function Image({ images, para }) {
 root.render(
   <div>
     <h1 className="text-center text-2xl font-bold mb-4">Image Gallery</h1>
-    <div className="grid grid-cols-4 gap-4 items-center justify-center min-h-screen bg-gray-100 p-4">
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 items-center justify-center min-h-screen bg-gray-300 p-4">
       {gallery.map((item, index) => (
         <Image key={index} images={item.images} para={item.para} />
       ))}
